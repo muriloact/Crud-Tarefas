@@ -1,21 +1,20 @@
-import Navbar from './components/Navbar'
+import 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Criar from './pages/Criar'
+import Editar from './pages/Editar'
 
 function App() {
 
-  function Testando() {
-    console.log("olá")
-  }
-
 
   return (
-
-    <div className='flex justify-center'>
-      <Navbar/>
-
-    </div>
-
-
-
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/criar' element={<Criar />} />
+        <Route path='/editar' element={<Editar />} />
+      </Routes>
+    </>  
   )
 }
 
